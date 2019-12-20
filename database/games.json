@@ -1,8 +1,12 @@
 {
-    "games":{
+    "games":[
+        {
             "name": "CsGo",
             "plateforme": "Steam"
-        
-    }
+        },
+        {
+            "name": "PUBG",
+            "plateforme": "Steam"
+        }]
 
 }
