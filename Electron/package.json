@@ -1,0 +1,14 @@
+{
+  "name": "BestSettings",
+  "version": "1.0.0",
+  "description": "Application listage des meilleurs settings de jeux vidéo",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "GP,KV,YB",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^7.1.7"
+  }
+}
