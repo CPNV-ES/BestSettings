@@ -1,12 +1,12 @@
-{
-    "games":[
-        {
-            "name": "CsGo",
-            "plateforme": "Steam"
-        },
-        {
-            "name": "PUBG",
-            "plateforme": "Steam"
-        }]
-
-}
+[
+    {
+    "id": "CSGO",
+    "logo": "csgo.png",
+    "Plateforme": "Steam"
+    },
+    {
+    "id": "PUBG",
+    "logo": "pubg.png",
+    "Plateforme": "Steam"
+    }
+]
