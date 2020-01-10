@@ -6,7 +6,7 @@ header("Content-Type: application/json; charset=UTF-8");
 
 class Read{
 
-    private $dbname = "bestsettings";
+    private $dbname = "Bestsettings";
 
     function __construct(){
         // include database file
@@ -16,7 +16,7 @@ class Read{
 
 
     function getAllGame(){
-        $collection = 'jeux';
+        $collection = 'games';
         //DB connection
         $db = new DbManager();
         $conn = $db->getConnection();
