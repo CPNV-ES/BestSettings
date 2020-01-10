@@ -5,13 +5,16 @@ function createWindow () {
   let win = new BrowserWindow({
     width: 800,
     height: 600,
+    icon: __dirname + '/BS.jpg',
     webPreferences: {
-      nodeIntegration: true
+      nodeIntegration: true,
+      webSecurity: false,
+      allowDisplayingInsecureContent: true,
+      allowRunningInsecureContent: true,
     }
   })
 
   // and load the index.html of the app.
   win.loadFile('index.html')
 }
-
 app.on('ready', createWindow)

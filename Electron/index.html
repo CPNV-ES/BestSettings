@@ -3,13 +3,18 @@
   <head>
     <meta charset="UTF-8">
     <title>BestSettings</title>
-    <!-- https://electronjs.org/docs/tutorial/security#csp-meta-tag -->
+    <script src="js/index.js"></script>
     <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
   </head>
   <body>
+    <p id="error"></p>
     <h1>BestSettings</h1>
-    We are using node <script>document.write(process.versions.node)</script>,
-    Chrome <script>document.write(process.versions.chrome)</script>,
-    and Electron <script>document.write(process.versions.electron)</script>.
+    <table>
+      <th>Name</th>
+      <th>Logo</th>
+    <tbody id="tablegame">
+
+    </tbody>
+    </table>
   </body>
 </html>

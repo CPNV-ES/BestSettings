@@ -23,7 +23,7 @@ class Read{
         // read all records
         $filter = [];
         $option = [];
-        $read = new MongoDB\Driver\Query($filter, $option);
+        $read = new MongoDB\Driver\Query($filter, $option);   
         //fetch records
         $records = $this->conn->executeQuery("$this->dbname.$collection", $read);
 
