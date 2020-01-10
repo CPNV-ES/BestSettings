@@ -1,0 +1,21 @@
+[
+    {
+        "settings":  [
+            {
+                "azerty":  [
+                    {
+                        "attaque": "x"
+                    }
+                ],
+
+                "qwertz":  [
+                    {
+                        "attaque": "x"
+                    }
+                ]
+            }
+        ],
+       
+        "deviceId":""
+    }
+]

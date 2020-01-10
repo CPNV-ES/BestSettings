@@ -1,10 +1,20 @@
 [
     {
-    "id": "Souris",
-    "logo": "souris.png"
+        "name": "Souris",
+        "logo": "/test/souris.png"
     },
     {
-    "id": "Clavier",
-    "logo": "clavier.png"
+        "name": "Clavier",
+        "logo": "/test/clavier.png"
+    },
+    {
+        "name": "Manette Xbox",
+        "logo": "/test/mXbox.png"
+        
+    },
+    {
+        "name": "Manette PS4",
+        "logo": "/test/mPs4.png"
+        
     }
 ]
