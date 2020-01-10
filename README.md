@@ -16,7 +16,7 @@ ouvrez un terminal et rendez vous à la racine du projet:
  cd \Repertoire\du\projet
 ```
 
-Installer Electron en executant la commande:
+Installer Electron et JQuery en executant la commande:
 
 ```bash
  npm i
