@@ -1,0 +1,26 @@
+[
+    {
+        "name": "Steam",
+        "logo": "/test/steam.png"
+    },
+    {
+        "name": "Uplay",
+        "logo": "/test/uplay.png"
+    },
+    {
+        "name": "Origin",
+        "logo": "/test/origin.png"
+    },
+    {
+        "name": "Battle.net",
+        "logo": "/test/battleNet.png"
+    },
+    {
+        "name": "Epic Games",
+        "logo": "/test/epicgames.png"
+    },
+    {
+        "name": "GOG",
+        "logo": "/test/gog.png"
+    }
+]

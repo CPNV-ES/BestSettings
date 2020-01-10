@@ -21,3 +21,8 @@ Installer Electron en executant la commande:
 ```bash
  npm i
 ```
+
+
+## Installation de mongoDb
+
+https://www.mongodb.com/download-center/community

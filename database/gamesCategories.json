@@ -1,0 +1,22 @@
+[
+    {
+        "name": "FPS",
+        "logo": "/test/fps.png"
+    },
+    {
+        "name": "TPS",
+        "logo": "/test/tps.png"
+    },
+    {
+        "name": "MOBA",
+        "logo": "/test/moba.png"
+    },
+    {
+        "name": "MMO",
+        "logo": "/test/mmo.png"
+    },
+    {
+        "name": "RPG",
+        "logo": "/test/rpg.png"
+    }
+]

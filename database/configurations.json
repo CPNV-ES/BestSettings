@@ -1,0 +1,29 @@
+[
+    {
+        "graphicsConfigs":  [
+                                {
+                                    "graphicsConfigId":""            
+                                }, 
+                                {
+                                    "graphicsConfigId":"" 
+                                }
+                            ],
+
+        "controllersConfigs":  [
+                                    {
+                                        "controllersConfigId":""            
+                                    }, 
+                                    {
+                                        "controllersConfigId":"" 
+                                    }
+                                ],
+        "keyboardsConfigs":  [
+                                {
+                                    "keyboardsConfigId":""            
+                                }, 
+                                {
+                                    "keyboardsConfigId":"" 
+                                }
+                            ]   
+        }
+]

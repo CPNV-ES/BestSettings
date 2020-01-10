@@ -1,0 +1,62 @@
+[
+    {
+        "name": "CSGO",
+        "logo": "/test/csgo.png",
+        "platforms":  [
+                            {
+                                "plateformId":""            
+                            }, 
+                            {
+                                "plateformId":"" 
+                            }
+                        ],
+        "gameCategories":  [
+                            {
+                                "gameCategoryId":""            
+                            }, 
+                            {
+                                "gameCategoryId":"" 
+                            }
+                        ],
+        "gameConfigurations":  [
+                            {
+                                "gameConfigurationId":""            
+                            }, 
+                            {
+                                "gameConfigurationId":"" 
+                            }
+                        ]
+
+
+    },
+    {
+        "name": "PUBG",
+        "logo": "/test/pubg.png",
+        "platforms":  [
+                            {
+                                "plateformId":""            
+                            }, 
+                            {
+                                "plateformId":"" 
+                            }
+                        ],
+        "gamesCategories":  [
+                            {
+                                "gameCategoryId":""            
+                            }, 
+                            {
+                                "gameCategoryId":"" 
+                            }
+                        ],
+        "gameConfigurations":  [
+                            {
+                                "gameConfigurationId":""            
+                            }, 
+                            {
+                                "gameConfigurationId":"" 
+                            }
+                        ]
+    
+    
+        }
+]
