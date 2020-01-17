@@ -5,18 +5,17 @@ header("Content-Type: application/json; charset=UTF-8");
 
 class Read{
 
-    private $dbname = "Bestsettings";
     private $conn;
+    private $dbname;
 
     function __construct(){
         // include database file
         include_once 'Database/db.php';
         //DB connection
         $db = new DbManager();
+        $this->dbname = $db->dbname;
         $this->conn = $db->getConnection();
     }
-
-
 
     function getAllGame(){
         $collection = 'games';
@@ -33,10 +32,9 @@ class Read{
     function getGameById($params){
         $collection = 'games';
         // read all records
-        $filter = ['_id' => new MongoDB\BSON\ObjectId($params['Game'])];
+        $filter = ['_id' => new MongoDB\BSON\ObjectId($params['games'])];
         $option = [];
         $read = new MongoDB\Driver\Query($filter, $option);
-        
         //fetch records
         $records = $this->conn->executeQuery("$this->dbname.$collection", $read);
 

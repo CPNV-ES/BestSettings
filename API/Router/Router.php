@@ -36,37 +36,46 @@
         }
 
         public static function prepare($function,$matches,$url,$method){
-            $formated_array=self::getClassAndMethod($function);
+            $formated_array=self::getClassMethodAndAction($function);
             $class = $formated_array['class'];
             $functionClass = $formated_array['method'];
+            $collection = $formated_array['action'];
             $parameter_array=self::assignementParameters($matches,$url);
-            Switch($method){
-                case "GET":
-                    include("Action/Read.php");
-                break;
-                case "POST":
-                    include("Action/Create.php");
-                break;   
-                case "PUT":
-                    include("Action/Update.php");
-                break;
-                case "DELETE":
-                    include("Action/Delete.php");
-                break;
-            }
+            self::getMethodAndIncludeAction($method,$collection);
             if (!empty($parameter_array) && count($parameter_array)>=1 ){
-                $action = new $class;
-                $action->$functionClass($parameter_array);
+                $object = new $class;
+                $object->$functionClass($parameter_array);
             }else{
-                $action = new $class();
-                $action->$functionClass();
+                $object = new $class();
+                $object->$functionClass();
             }   
         }
         
-        public static function getClassAndMethod($function){
+        public static function getMethodAndIncludeAction($method,$collection){
+
+            Switch($method){
+                
+                case "GET":
+                    include("Model/".$collection."/Read.php");
+                break;
+                case "POST":
+                    include("Model/".$collection."/Create.php");
+                break;   
+                case "PUT":
+                    include("Model/".$collection."/Update.php");
+                break;
+                case "DELETE":
+                    include("Model/".$collection."/Delete.php");
+                break;
+            }
+        }
+
+        public static function getClassMethodAndAction($function){
             $array_class_method=[];
             $controller=explode('@',$function);
-            $array_class_method['class']= $controller[0];
+            $actionClass=explode('/',$controller[0]);
+            $array_class_method['action']= $actionClass[0];
+            $array_class_method['class']= $actionClass[1];
             $array_class_method['method']= $controller[1];
             return $array_class_method;
         } 
