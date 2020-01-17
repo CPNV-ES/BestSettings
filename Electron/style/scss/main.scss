@@ -1,0 +1,23 @@
+////////////////////////////
+///// MAIN SCSS
+//////////////////////////
+
+
+/////////////////////
+// BASE //
+
+// Colors
+@import './base/colors';
+
+// General settings
+@import './base/generalSettings';
+
+
+/////////////////////
+// COMPONENTS //
+
+// Inputs
+@import 'components/inputs';
+
+/////////////////////
+// LAYOUT //

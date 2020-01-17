@@ -5,7 +5,7 @@ header("Content-Type: application/json; charset=UTF-8");
 
 class Read{
 
-    private $dbname = "Bestsettings";
+    private $dbname = "BestSettings";
     private $conn;
 
     function __construct(){

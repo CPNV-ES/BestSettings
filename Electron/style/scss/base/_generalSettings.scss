@@ -1,0 +1,17 @@
+////////////////////////////
+///// General Settings
+//////////////////////////
+
+body{
+    background-color: $body;
+    color: $general-text;
+}
+
+.navbar{
+    background-color: $components !important;
+    color: $main-text;
+}
+
+.title{
+    color: $title;
+}

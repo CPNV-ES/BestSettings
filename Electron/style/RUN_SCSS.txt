@@ -1,0 +1,2 @@
+Run sass watcher
+sass --watch style/scss:style/css
