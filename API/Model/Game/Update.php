@@ -24,11 +24,9 @@ class Update{
 
     public function updateGameById($params){
         $collection = 'games';
-        parse_str(file_get_contents('php://input'), $jsondata);
-        print_r($jsondata);
+        $jsondata = file_get_contents('php://input');
         $game = json_decode($jsondata);
-        print_r($game);
-        $this->bulk->update(['_id'=>new MongoDB\BSON\ObjectID($params['game'])],['$set' => ['name' => $game->name, 'logo' =>$game->logo, 'platforms' => $game->platforms, 'gameCategories' => $game->gameCategories, 'gameConfigurations' => $game->gameConfigurations]], ['multi' => false, 'upsert' => false]);
+        $this->bulk->update(['_id'=>new MongoDB\BSON\ObjectID($params['games'])],['$set' => ['name' => $game->name, 'logo' =>$game->logo, 'platforms' => $game->platforms, 'gameCategories' => $game->gameCategories, 'gameConfigurations' => $game->gameConfigurations]], ['multi' => false, 'upsert' => false]);
         $result  = $this->manager->executeBulkWrite("$this->dbname.$collection", $this->bulk);;
         $json = array(
             'number' => $result->getModifiedCount()
