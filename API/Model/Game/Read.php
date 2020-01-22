@@ -1,9 +1,10 @@
 <?php
 // required headers
+require_once "Model/Category/Read.php";
+
 header("Access-Control-Allow-Origin: *");
 header("Content-Type: application/json; charset=UTF-8");
-
-class Read{
+class ReadGame{
 
     private $conn;
     private $dbname;
@@ -29,16 +30,44 @@ class Read{
         echo json_encode(iterator_to_array($records));
     } 
 
-    function getGameById($params){
+    function getAllInformationOfGameById($params){
         $collection = 'games';
         // read all records
         $filter = ['_id' => new MongoDB\BSON\ObjectId($params['games'])];
         $option = [];
         $read = new MongoDB\Driver\Query($filter, $option);
         //fetch records
-        $records = $this->conn->executeQuery("$this->dbname.$collection", $read);
+        $records = $this->conn->executeQuery("$this->dbname.$collection", $read); 
+        
+        $records = $records->toArray();
+        
+        foreach($records as $record)
+        {
+            //declaration of class
+            $Category = new ReadCategory;
 
-        echo json_encode(iterator_to_array($records));
+            //Get Categories of game and append to record
+            $ArrayCategories = [];
+            foreach($record->gameCategories as $categories)
+            {
+                $id['categories']=$categories->gameCategoryId;
+                $id['return']= 1;
+                
+                $categorie = array_shift($Category->getCategoriesById($id));
+                array_push($ArrayCategories,$categorie);
+            }
+            $record->gameCategories = $ArrayCategories;
+            //Get plateform of game and append to record
+            /* foreach($record->gameCategories as $categories)
+            {
+                $id['categories']=$categories->gameCategoryId;
+                $id['return']= 1;
+                $record->gameCategories = [];
+                array_push($record->gameCategories, $Category->getCategoriesById($id));
+            } */
+            echo json_encode($record);
+        }
+        
     } 
 }
 

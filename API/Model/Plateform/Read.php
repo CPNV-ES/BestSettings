@@ -39,7 +39,7 @@ class ReadCategory{
         $records = $this->conn->executeQuery("$this->dbname.$collection", $read);
         if(isset($params['return']))
         {
-            return $records->toArray();
+            return (object) $records->toArray();
         }else
         {
             echo json_encode(iterator_to_array($records));
