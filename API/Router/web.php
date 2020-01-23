@@ -14,5 +14,13 @@ Router::add('GET','/categories/id', 'Category/ReadCategory@getCategoriesById');
 Router::add('POST','/categories', 'Category/Create@CreateGame');
 Router::add('DELETE','/categories/id', 'Category/Delete@deleteGameById' );
 Router::add('PUT','/categories/id', 'Category/Update@updateGameById' );
+
+//Categories route
+Router::add('GET','/plateforms', 'Plateform/ReadPlatform@getAllPlateform');
+Router::add('GET','/plateforms/id', 'Plateform/ReadPlatform@getPlateformById');
+Router::add('POST','/plateforms', 'Plateform/CreatePlatform@CreatePlatform');
+Router::add('DELETE','/plateforms/id', 'Plateform/DeletePlaform@deletePlateformById' );
+Router::add('PUT','/plateforms/id', 'Plateform/PlateformUpdate@updatePlatefromById' );
+
 Router::run();
 ?>

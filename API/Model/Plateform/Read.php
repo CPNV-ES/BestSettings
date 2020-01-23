@@ -3,7 +3,7 @@
 header("Access-Control-Allow-Origin: *");
 header("Content-Type: application/json; charset=UTF-8");
 
-class ReadCategory{
+class ReadPlatform{
 
     private $conn;
     private $dbname;
@@ -17,8 +17,8 @@ class ReadCategory{
         $this->conn = $db->getConnection();
     }
 
-    function getAllCategories(){
-        $collection = 'gamesCategories';
+    function getAllPlateform(){
+        $collection = 'plateforms';
         // read all records
         $filter = [];
         $option = [];
@@ -29,10 +29,10 @@ class ReadCategory{
         echo json_encode(iterator_to_array($records));
     } 
 
-    function getCategoriesById($params){
-        $collection = 'gamesCategories';
+    function getPlateformById($params){
+        $collection = 'plateforms';
         // read all records
-        $filter = ['_id' => new MongoDB\BSON\ObjectId($params['categories'])];
+        $filter = ['_id' => new MongoDB\BSON\ObjectId($params['plateforms'])];
         $option = [];
         $read = new MongoDB\Driver\Query($filter, $option);
         //fetch records

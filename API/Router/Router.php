@@ -54,7 +54,6 @@
         public static function getMethodAndIncludeAction($method,$collection){
 
             Switch($method){
-                
                 case "GET":
                     include("Model/".$collection."/Read.php");
                 break;

@@ -4,7 +4,7 @@
 header("Access-Control-Allow-Origin: *");
 header("Content-Type: application/json; charset=UTF-8");
 
-class Update{
+class PlateformUpdate{
 
     private $conn;
     private $dbname;
@@ -22,12 +22,12 @@ class Update{
         $this->manager = new MongoDB\Driver\Manager;
     }
 
-    public function updateGameById($params){
-        $collection = 'gamesCategories';
+    public function updatePlatefromById($params){
+        $collection = 'plateforms';
         $jsondata = file_get_contents('php://input');
-        $category = json_decode($jsondata);
-        $this->bulk->update(['_id'=>new MongoDB\BSON\ObjectID($params['categories'])],['$set' => ['name' =>$category->name, 'logo' =>$category->logo]], ['multi' => false, 'upsert' => false]);
-        $result  = $this->manager->executeBulkWrite("$this->dbname.$collection", $this->bulk);;
+        $plateform = json_decode($jsondata);
+        $this->bulk->update(['_id'=>new MongoDB\BSON\ObjectID($params['plateforms'])],['$set' => ['name' =>$plateform->name, 'logo' =>$plateform->logo]], ['multi' => false, 'upsert' => false]);
+        $result  = $this->manager->executeBulkWrite("$this->dbname.$collection", $this->bulk);
         $json = array(
             'number' => $result->getModifiedCount()
         );

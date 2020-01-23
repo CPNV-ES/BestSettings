@@ -4,7 +4,7 @@
 header("Access-Control-Allow-Origin: *");
 header("Content-Type: application/json; charset=UTF-8");
 
-class Delete{
+class DeletePlaform{
 
     private $conn;
     private $dbname;
@@ -22,9 +22,9 @@ class Delete{
         $this->manager = new MongoDB\Driver\Manager;
     }
     
-    public function deleteGameById($params){
-        $collection = 'gamesCategories';
-        $this->bulk->delete(['_id' => new MongoDB\BSON\ObjectId($params['categories'])], ['limit' => 1]);
+    public function deletePlateformById($params){
+        $collection = 'plateforms';
+        $this->bulk->delete(['_id' => new MongoDB\BSON\ObjectId($params['plateforms'])], ['limit' => 1]);
         $result = $this->manager->executeBulkWrite("$this->dbname.$collection",$this->bulk);
         $json = array(
             'number' => $result->getDeletedCount()

@@ -52,9 +52,11 @@ class ReadGame{
             {
                 $id['categories']=$categories->gameCategoryId;
                 $id['return']= 1;
-                
+                if(is_null($id['categories']))
+                {
                 $categorie = array_shift($Category->getCategoriesById($id));
                 array_push($ArrayCategories,$categorie);
+                }
             }
             $record->gameCategories = $ArrayCategories;
             //Get plateform of game and append to record
