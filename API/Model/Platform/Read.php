@@ -17,8 +17,8 @@ class ReadPlatform{
         $this->conn = $db->getConnection();
     }
 
-    function getAllPlateform(){
-        $collection = 'plateforms';
+    function getAllPlatforms(){
+        $collection = 'platforms';
         // read all records
         $filter = [];
         $option = [];
@@ -29,17 +29,18 @@ class ReadPlatform{
         echo json_encode(iterator_to_array($records));
     } 
 
-    function getPlateformById($params){
-        $collection = 'plateforms';
+    function getPlatformById($params){
+        $collection = 'platforms';
         // read all records
-        $filter = ['_id' => new MongoDB\BSON\ObjectId($params['plateforms'])];
+        $filter = ['_id' => new MongoDB\BSON\ObjectId($params['platform'])];
         $option = [];
         $read = new MongoDB\Driver\Query($filter, $option);
         //fetch records
         $records = $this->conn->executeQuery("$this->dbname.$collection", $read);
         if(isset($params['return']))
         {
-            return (object) $records->toArray();
+            return $records->toArray();
+
         }else
         {
             echo json_encode(iterator_to_array($records));

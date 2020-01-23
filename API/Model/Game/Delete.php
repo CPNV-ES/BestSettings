@@ -4,7 +4,7 @@
 header("Access-Control-Allow-Origin: *");
 header("Content-Type: application/json; charset=UTF-8");
 
-class Delete{
+class DeleteGame{
 
     private $conn;
     private $dbname;

@@ -4,7 +4,7 @@
 header("Access-Control-Allow-Origin: *");
 header("Content-Type: application/json; charset=UTF-8");
 
-class PlateformUpdate{
+class DeletePlaform{
 
     private $conn;
     private $dbname;
@@ -21,15 +21,13 @@ class PlateformUpdate{
         $this->bulk = new MongoDB\Driver\BulkWrite;
         $this->manager = new MongoDB\Driver\Manager;
     }
-
-    public function updatePlatefromById($params){
-        $collection = 'plateforms';
-        $jsondata = file_get_contents('php://input');
-        $plateform = json_decode($jsondata);
-        $this->bulk->update(['_id'=>new MongoDB\BSON\ObjectID($params['plateforms'])],['$set' => ['name' =>$plateform->name, 'logo' =>$plateform->logo]], ['multi' => false, 'upsert' => false]);
-        $result  = $this->manager->executeBulkWrite("$this->dbname.$collection", $this->bulk);
+    
+    public function deletePlateformById($params){
+        $collection = 'platforms';
+        $this->bulk->delete(['_id' => new MongoDB\BSON\ObjectId($params['platform'])], ['limit' => 1]);
+        $result = $this->manager->executeBulkWrite("$this->dbname.$collection",$this->bulk);
         $json = array(
-            'number' => $result->getModifiedCount()
+            'number' => $result->getDeletedCount()
         );
         echo json_encode($json);
     } 

@@ -1,6 +1,7 @@
 <?php
 // required headers
 require_once "Model/Category/Read.php";
+require_once "Model/Platform/Read.php";
 
 header("Access-Control-Allow-Origin: *");
 header("Content-Type: application/json; charset=UTF-8");
@@ -8,14 +9,15 @@ class ReadGame{
 
     private $conn;
     private $dbname;
+    private $db;
 
     function __construct(){
         // include database file
         include_once 'Database/db.php';
         //DB connection
-        $db = new DbManager();
-        $this->dbname = $db->dbname;
-        $this->conn = $db->getConnection();
+        $this->db = new DbManager();
+        $this->dbname = $this->db->dbname;
+        $this->conn = $this->db->getConnection();
     }
 
     function getAllGame(){
@@ -33,7 +35,7 @@ class ReadGame{
     function getAllInformationOfGameById($params){
         $collection = 'games';
         // read all records
-        $filter = ['_id' => new MongoDB\BSON\ObjectId($params['games'])];
+        $filter = ['_id' => new MongoDB\BSON\ObjectId($params['game'])];
         $option = [];
         $read = new MongoDB\Driver\Query($filter, $option);
         //fetch records
@@ -45,28 +47,16 @@ class ReadGame{
         {
             //declaration of class
             $Category = new ReadCategory;
+            $Platform = new ReadPlatform;
 
             //Get Categories of game and append to record
-            $ArrayCategories = [];
-            foreach($record->gameCategories as $categories)
-            {
-                $id['categories']=$categories->gameCategoryId;
-                $id['return']= 1;
-                if(is_null($id['categories']))
-                {
-                $categorie = array_shift($Category->getCategoriesById($id));
-                array_push($ArrayCategories,$categorie);
-                }
-            }
-            $record->gameCategories = $ArrayCategories;
-            //Get plateform of game and append to record
-            /* foreach($record->gameCategories as $categories)
-            {
-                $id['categories']=$categories->gameCategoryId;
-                $id['return']= 1;
-                $record->gameCategories = [];
-                array_push($record->gameCategories, $Category->getCategoriesById($id));
-            } */
+            $Categories = $this->db->Join($record,$Category,'getCategoryById','category','gameCategories','gameCategoryId');
+            $record->gameCategories = $Categories;
+
+            //Get Platforms of game and append to record
+            $Plateforms = $this->db->Join($record,$Platform,'getPlatformById','platform','platforms','plateformId');
+            $record->platforms = $Plateforms;
+
             echo json_encode($record);
         }
         

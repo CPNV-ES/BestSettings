@@ -29,10 +29,10 @@ class ReadCategory{
         echo json_encode(iterator_to_array($records));
     } 
 
-    function getCategoriesById($params){
+    function getCategoryById($params){
         $collection = 'gamesCategories';
         // read all records
-        $filter = ['_id' => new MongoDB\BSON\ObjectId($params['categories'])];
+        $filter = ['_id' => new MongoDB\BSON\ObjectId($params['category'])];
         $option = [];
         $read = new MongoDB\Driver\Query($filter, $option);
         //fetch records

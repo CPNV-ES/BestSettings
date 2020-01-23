@@ -19,6 +19,21 @@ class DbManager{
     }
 	function getConnection() {
 		return $this->conn;
-	}
+    }
+    
+    function Join($record,$object,$function,$idName,$attribute,$idattribute){
+        $DataArray = [];
+        foreach($record->$attribute as $row)
+        {
+            $id[$idName]=$row->$idattribute;
+            $id['return']= 1;
+            if(!is_null($id[$idName]))
+            {   
+                $Data = array_shift($object->$function($id));
+                array_push($DataArray,$Data);
+            }
+        }
+        return $DataArray;
+    }
 }
 ?>

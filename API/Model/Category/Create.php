@@ -4,7 +4,7 @@
 header("Access-Control-Allow-Origin: *");
 header("Content-Type: application/json; charset=UTF-8");
 
-class Create{
+class CreateCategory{
 
     private $conn;
     private $dbname;
@@ -22,7 +22,8 @@ class Create{
         $this->manager = new MongoDB\Driver\Manager;
     }
 
-    public function CreateGame(){
+    public function CreateCategory(){
+        echo '1';
         $collection = 'gamesCategories';
         $jsondata = file_get_contents('php://input');
         $category = json_decode($jsondata);

@@ -23,7 +23,7 @@ class CreatePlatform{
     }
 
     public function CreatePlatform(){
-        $collection = 'plateforms';
+        $collection = 'platforms';
         $jsondata = file_get_contents('php://input');
         $plateform = json_decode($jsondata);
         $this->bulk->insert(['name' =>$plateform->name, 'logo' =>$plateform->logo]);
