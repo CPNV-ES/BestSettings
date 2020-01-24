@@ -7,10 +7,58 @@ body {
   color: #33a8d9; }
 
 .title {
-  color: white; }
+  color: #c5c3c3; }
+
+hr {
+  border: 0;
+  clear: both;
+  display: block;
+  width: 100%;
+  background-color: #33a8d9;
+  height: 2px; }
 
 .search-btn {
   background-color: #33a8d9;
   color: #e9dfdf; }
+
+.card {
+  width: 14rem !important;
+  height: 95%;
+  margin-right: 50px;
+  border: none !important;
+  background-color: unset !important; }
+
+.card:hover {
+  border: none !important; }
+
+a:hover {
+  text-decoration: none !important; }
+
+.card-title {
+  color: #33a8d9;
+  font-weight: bolder;
+  margin-top: -12px; }
+
+.card-text {
+  color: #33a8d9 !important;
+  margin-top: -14px; }
+
+.card-img {
+  background-position: center;
+  background-size: cover;
+  height: 300px; }
+
+.card-img, .card-img-bottom {
+  border-bottom-left-radius: unset !important;
+  border-bottom-right-radius: unset !important; }
+
+.card-body {
+  background-color: #121212;
+  height: 20%; }
+
+.grow {
+  transition: transform .2s ease-in-out; }
+  .grow:hover {
+    transform: scale(1.025); }
 
 /*# sourceMappingURL=main.css.map */
