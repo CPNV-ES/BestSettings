@@ -1,11 +1,1 @@
-[
-    {
-        "settings":  [
-            {
-                "attaque": "x"
-            }
-        ],
-        "drivers":"https://moncul.ch",
-        "deviceId":""
-    }
-]
+{"_id":{"$oid":"5e18534f6e7ce22ae4a70606"},"settings":[{"attaque":"x"}],"drivers":"https://moncul.ch","deviceId":""}
