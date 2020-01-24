@@ -21,7 +21,7 @@ $.ajax({
             a.href = "";
             var divGrow = a.addElement('div', 'card grow');
             var divImg = divGrow.addElement('div', 'card-img');
-            var url = serveur+element.logo;
+            var url = serveur+element.card;
             divImg.style.backgroundImage ="url("+url+")"
             var divBody = divGrow.addElement('div', 'card-body');
             var h5 = divBody.addElement('h5', 'card-title');
