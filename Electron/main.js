@@ -5,7 +5,7 @@ function createWindow () {
   let win = new BrowserWindow({
     width: 1080,
     height: 920,
-    icon: __dirname + '/BS.jpg',
+    icon: __dirname + '/logo.png',
     webPreferences: {
       nodeIntegration: true,
       webSecurity: false,
