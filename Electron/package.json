@@ -1,12 +1,12 @@
 {
   "name": "BestSettings",
   "version": "1.0.0",
-  "productName":"BestSettings",
+  "productName": "BestSettings",
   "description": "Application listage des meilleurs settings de jeux vidéo",
   "main": "main.js",
   "scripts": {
     "start": "electron .",
-    "package": "electron-packager . BestSettings --overwrite --platform=win32 --arch=ia32 --icon=./app-icon.ico --prune=true --out=../Application/"
+    "package": "electron-packager . BestSettings --overwrite --platform=win32 --arch=ia32 --icon=./logo.ico --prune=true --out=../Application/"
   },
   "author": "GP,KV,YB",
   "license": "ISC",
