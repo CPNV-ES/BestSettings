@@ -17,3 +17,10 @@ function createWindow () {
   // and load the index.html of the app.
   win.loadFile('./views/index.html')
 }
+
+app.on('ready', createWindow)
+
+ipcMain.on('serveur', (event) => {
+  //do something with args
+  event.returnValue = 'http://127.0.0.1:8000';
+ });
