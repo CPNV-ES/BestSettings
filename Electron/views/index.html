@@ -3,9 +3,8 @@
   <head id="head">
     <meta charset="UTF-8">
     <title>BestSettings</title>
+      <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
 
-    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
-  
   </head>
     
   <script> 
@@ -38,42 +37,12 @@
 
       </div>
         
-      <div class="row pt-3">
-        
-        <a href="./gameDetails.html">
-          <div class="card grow">
-             
-              <div class="card-img" style="background-image: url(../../API/Image/cs-go.jpg)"></div>
+      <div id="games" class="row pt-3">
 
-              <div class="card-body">
-                  <h5 class="card-title">CSGO</h5>
-
-                    <div class="infos">
-                    </div>
-                 
-              </div>
-          </div>
-        </a>
-
-        <a href="./gameDetails.html">
-          <div class="card grow">
-             
-              <div class="card-img" style="background-image: url(../../API/Image/pubg.jpg)"></div>
-
-              <div class="card-body">
-                  <h5 class="card-title">PUBG</h5>
-
-                    <div class="infos">
-                    </div>
-                 
-              </div>
-          </div>
-        </a>
-      
       </div>  
 
     </div>
   
   </body>
-
+  <script src="../js/Controller/GameController.js"></script>
 </html>

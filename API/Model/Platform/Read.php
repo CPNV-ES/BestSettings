@@ -5,10 +5,6 @@ header("Content-Type: application/json; charset=UTF-8");
 
 class ReadPlatform{
 
-<<<<<<< HEAD:API/Action/Read.php
-    private $dbname = "BestSettings";
-=======
->>>>>>> feature/APIv2:API/Model/Platform/Read.php
     private $conn;
     private $dbname;
 
