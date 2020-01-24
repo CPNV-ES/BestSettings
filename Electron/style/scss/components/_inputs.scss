@@ -1,6 +1,17 @@
-
+////////////////////////////
+///// Inputs
+//////////////////////////
 
 .search-btn{
     background-color: $main-text;
     color: $general-text;
+}
+
+.returnBtn{
+    margin-left: -95px;
+    position: absolute;
+}
+
+.returnBtn a{
+    color: $main-text;
 }

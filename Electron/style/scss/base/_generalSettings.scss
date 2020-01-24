@@ -24,3 +24,29 @@ hr {
     background-color: #33a8d9;
     height: 2px;
 }
+
+
+@media (min-width: 576px){
+    .container, .container-sm {
+        max-width: 440px !important;
+    }
+}
+
+
+@media (min-width: 768px){
+    .container, .container-md, .container-sm {
+        max-width: 625px !important;
+    }
+}
+
+@media (min-width: 992px){
+    .container, .container-lg, .container-md, .container-sm {
+        max-width: 820px !important;
+    }
+}
+
+@media (min-width: 1200px){
+    .container, .container-lg, .container-md, .container-sm, .container-xl {
+        max-width: 1030px !important;
+    }
+}
