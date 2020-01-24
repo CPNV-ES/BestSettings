@@ -15,6 +15,6 @@ function createWindow () {
   })
 
   // and load the index.html of the app.
-  win.loadFile('index.html')
+  win.loadFile('./views/index.html')
 }
 app.on('ready', createWindow)

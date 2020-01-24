@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head id="head">
+    <meta charset="UTF-8">
+    <title>BestSettings</title>
+
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
+  
+  </head>
+    
+  <script> 
+    window.$ = window.jQuery = require('jquery');
+    
+    $(function(){
+      $("#head").load("./partials/head.html"); 
+      $("#header").load("./partials/header.html"); 
+      $("#footer").load("./partials/footer.html"); 
+    });
+  </script> 
+
+
+  <body>
+    
+    <header id="header">
+
+    </header>
+
+    <div class="container pt-4">
+
+        <div class="row ">
+            <p id="error"></p>
+        
+        <div class="col-12">
+            <h1 class="title">Settings for CSGO</h1>
+
+            
+
+        </div>
+        
+        <hr>
+
+    </div>
+        
+    <div class="row pt-3">
+        
+      
+    </div>  
+  
+  </body>
+
+</html>
