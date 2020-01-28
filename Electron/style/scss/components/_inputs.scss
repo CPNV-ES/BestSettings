@@ -7,11 +7,11 @@
     color: $general-text;
 }
 
-.returnBtn{
-    margin-left: -95px;
-    position: absolute;
-}
 
-.returnBtn a{
+.returnBtn{
     color: $main-text;
+
+    &:hover{
+        color: $main-text;
+    }
 }

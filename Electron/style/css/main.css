@@ -34,11 +34,9 @@ hr {
   color: #e9dfdf; }
 
 .returnBtn {
-  margin-left: -95px;
-  position: absolute; }
-
-.returnBtn a {
   color: #33a8d9; }
+  .returnBtn:hover {
+    color: #33a8d9; }
 
 .card {
   width: 14rem !important;
