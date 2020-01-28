@@ -21,7 +21,7 @@ class DbManager{
 		return $this->conn;
     }
     
-    function Join($record,$object,$function,$idName,$attribute,$idattribute){
+    function JoinMultipleData($record,$object,$function,$idName,$attribute,$idattribute){
         $DataArray = [];
         foreach($record->$attribute as $row)
         {

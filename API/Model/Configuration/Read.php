@@ -47,11 +47,10 @@ class ReadConfiguration{
                     //declaration of class
                     $graphicConfiguration = new ReadGraphicConfig;
                     //Get Categories of game and append to record
-                    $graphicConfigurations = $this->db->Join($record,$graphicConfiguration,'getGraphicConfigById','graphicsConfig','graphicsConfigs','graphicsConfigId');
+                    $graphicConfigurations = $this->db->JoinMultipleData($record,$graphicConfiguration,'getGraphicConfigById','graphicsConfig','graphicsConfigs','graphicsConfigId');
                     $record->graphicsConfigs = $graphicConfigurations;
-                    /* echo json_encode($record); */
-                    print_r($record);
-                    /* return $record->toArray(); */
+                    $Data[] = $record;
+                    return $Data;
                 }
         }else
         {
