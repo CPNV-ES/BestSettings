@@ -1,6 +1,6 @@
 <?php
 // required headers
-
+require_once "Model/GraphicConfig/Read.php";
 
 header("Access-Control-Allow-Origin: *");
 header("Content-Type: application/json; charset=UTF-8");
@@ -40,13 +40,23 @@ class ReadConfiguration{
         //fetch records
         $records = $this->conn->executeQuery("$this->dbname.$collection", $read); 
         
-        $records = $records->toArray();
-        
-        foreach($records as $record)
+        if(isset($params['return']))
         {
-            echo json_encode($record);
-        }
-        
+            foreach($records as $record)
+                {
+                    //declaration of class
+                    $graphicConfiguration = new ReadGraphicConfig;
+                    //Get Categories of game and append to record
+                    $graphicConfigurations = $this->db->Join($record,$graphicConfiguration,'getGraphicConfigById','graphicsConfig','graphicsConfigs','graphicsConfigId');
+                    $record->graphicsConfigs = $graphicConfigurations;
+                    /* echo json_encode($record); */
+                    print_r($record);
+                    /* return $record->toArray(); */
+                }
+        }else
+        {
+            echo json_encode(iterator_to_array($records));
+        }      
     } 
 }
 

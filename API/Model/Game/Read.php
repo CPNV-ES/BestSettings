@@ -2,6 +2,7 @@
 // required headers
 require_once "Model/Category/Read.php";
 require_once "Model/Platform/Read.php";
+require_once "Model/Configuration/Read.php";
 
 header("Access-Control-Allow-Origin: *");
 header("Content-Type: application/json; charset=UTF-8");
@@ -48,18 +49,20 @@ class ReadGame{
             //declaration of class
             $Category = new ReadCategory;
             $Platform = new ReadPlatform;
+            $gameConfiguration = new ReadConfiguration;
 
             //Get Categories of game and append to record
             $Categories = $this->db->Join($record,$Category,'getCategoryById','category','gamesCategories','gameCategoryId');
-            $record->gameCategories = $Categories;
-
+            $record->gamesCategories = $Categories;
+            
             //Get Platforms of game and append to record
             $Plateforms = $this->db->Join($record,$Platform,'getPlatformById','platform','platforms','plateformId');
             $record->platforms = $Plateforms;
 
             //Get gameConfiguration of game and append to record
-            $gameConfiguration = $this->db->Join($record,$Platform,'getPlatformById','platform','platforms','plateformId');
-            $record->platforms = $Plateforms;
+            $gameConfigurations = $this->db->Join($record,$gameConfiguration,'getConfigurationById','configuration','gameConfigurations','gameConfigurationId');
+            $record->gameConfigurations = $gameConfigurations;
+
             echo json_encode($record);
         }
         
