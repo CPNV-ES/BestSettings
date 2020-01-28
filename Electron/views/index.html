@@ -23,17 +23,26 @@
 
     </header>
     
+    <div id="mySidenav" class="sidenav">
+      <div class="menuContent">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="#">FPS</a>
+        <a href="#">MOBA</a>
+        <a href="#">ETC....</a>        
+      </div>
+    </div>
+
     <div class="container pt-4">
 
       <p id="error"></p>
       
       <div class="row ">
         
-        <div class="col-10 col-sm-9">
+        <div class="col-sm-9 col-9">
           <h1 class="title">Games</h1>
         </div>
 
-        <div class="col-2 col-sm-3">
+        <div class="col-sm-3 col-3">
           <!-- Button trigger modal -->
           <button type="button" class="btn btn-dark mt-2 customBtn" data-toggle="modal" data-target="#exampleModalCenter">
             Add a game
@@ -122,5 +131,15 @@
   </body>
 
   <script src="../js/Controller/GameController.js"></script>
+
+  <script>
+    function openNav() {
+      document.getElementById("mySidenav").style.width = "250px";
+    }
+    
+    function closeNav() {
+      document.getElementById("mySidenav").style.width = "0";
+    }
+  </script>
 
 </html>
