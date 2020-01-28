@@ -39,14 +39,15 @@ class ReadGraphicConfig{
         $read = new MongoDB\Driver\Query($filter, $option);
         //fetch records
         $records = $this->conn->executeQuery("$this->dbname.$collection", $read); 
-        
-        $records = $records->toArray();
-        
-        foreach($records as $record)
+
+        if(isset($params['return']))
         {
-            echo json_encode($record);
+            return $records->toArray();
+            
+        }else
+        {
+            echo json_encode(iterator_to_array($records));
         }
-        
     } 
 }
 
