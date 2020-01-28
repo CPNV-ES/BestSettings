@@ -29,20 +29,98 @@
       
       <div class="row ">
         
-        <div class="col-8">
+        <div class="col-10 col-sm-9">
           <h1 class="title">Games</h1>
+        </div>
+
+        <div class="col-2 col-sm-3">
+          <!-- Button trigger modal -->
+          <button type="button" class="btn btn-dark mt-2 customBtn" data-toggle="modal" data-target="#exampleModalCenter">
+            Add a game
+          </button>
         </div>
         
         <hr>
 
       </div>
-        
-      <div id="games" class="row pt-3">
+       
+      <div class="row gamesDisplay">
+        <div id="games" class="row pt-3">
 
+        </div>
       </div>  
 
     </div>
   
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+
+        <div class="modal-content bg-dark">
+
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLongTitle">Add a game</h5>
+            <button type="button" class="close modalClose" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+
+          <div class="modal-body">
+            
+            <form>
+              <div class="form-group">
+                <label for="gameName">Game Name</label>
+                <input type="text" class="form-control" id="gameName" placeholder="Enter name">
+              </div>
+
+              <div class="form-group">
+                <label for="logo">Logo</label>
+                <input type="text" class="form-control" id="gameName" placeholder="Enter logo">
+              </div>
+
+              <div class="form-group">
+                <label for="card">Card</label>
+                <input type="text" class="form-control" id="gameName" placeholder="Enter logo">
+              </div>
+
+              <div class="form-group">
+                <label for="card">Platform</label>
+
+                <select class="form-control">
+                  <option value="" disabled selected>Platform....</option>
+                  <option>Steam</option>
+                </select>
+
+              </div>
+
+              <div class="form-group">
+                <label for="card">Category</label>
+
+                <select class="form-control">
+                  <option value="" disabled selected>Category....</option>
+                  <option>FPS</option>
+                  <option>TPS</option>
+
+                </select>
+
+              </div>
+
+          </div>
+
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="submit" class="btn btn-dark customBtn">Save changes</button>
+          </div> 
+        
+          </form>
+
+        </div>
+      </div>
+    </div>
+
   </body>
+
   <script src="../js/Controller/GameController.js"></script>
+
 </html>

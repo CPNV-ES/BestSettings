@@ -6,6 +6,9 @@ body {
   background-color: #121212 !important;
   color: #33a8d9; }
 
+.navbar h1:hover {
+  color: #2b8cb6; }
+
 .title {
   color: #c5c3c3; }
 
@@ -29,14 +32,23 @@ hr {
 @media (min-width: 1200px) {
   .container, .container-lg, .container-md, .container-sm, .container-xl {
     max-width: 1030px !important; } }
-.search-btn {
+.customBtn {
   background-color: #33a8d9;
   color: #e9dfdf; }
+  .customBtn:hover {
+    background-color: #2b8cb6; }
+  .customBtn:focus {
+    color: #33a8d9; }
 
 .returnBtn {
   color: #33a8d9; }
   .returnBtn:hover {
+    color: #2b8cb6; }
+  .returnBtn:focus {
     color: #33a8d9; }
+
+.modalClose {
+  color: #33a8d9; }
 
 .card {
   width: 14rem !important;
@@ -78,6 +90,9 @@ a:hover {
   background-size: contain;
   height: 100px;
   width: 51%; }
+
+.gamesDisplay {
+  justify-content: center; }
 
 .grow {
   transition: transform .2s ease-in-out; }

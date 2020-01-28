@@ -13,6 +13,10 @@ body{
     color: $main-text;
 }
 
+.navbar h1:hover{
+   color: $hover;
+}
+
 .title{
     color: $title;
 }

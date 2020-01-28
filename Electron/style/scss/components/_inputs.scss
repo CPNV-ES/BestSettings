@@ -2,9 +2,17 @@
 ///// Inputs
 //////////////////////////
 
-.search-btn{
+.customBtn{
     background-color: $main-text;
     color: $general-text;
+
+    &:hover{
+        background-color: $hover;
+    }
+    
+    &:focus{
+        color: $main-text;
+    }
 }
 
 
@@ -12,6 +20,14 @@
     color: $main-text;
 
     &:hover{
+        color: $hover;
+    }
+
+    &:focus{
         color: $main-text;
     }
+}
+
+.modalClose{
+    color: $main-text;
 }
