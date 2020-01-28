@@ -2,7 +2,7 @@
 // connect to mongodb
 class DbManager{
 
-    public $dbname = "Bestsettings";
+    public $dbname = "BestSettings";
     private $dbhost = "localhost";
     private $dbport = '27017';
     private $conn;
