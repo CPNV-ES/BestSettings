@@ -1,11 +1,10 @@
 <?php
 // required headers
-require_once "Model/Category/Read.php";
-require_once "Model/Platform/Read.php";
+
 
 header("Access-Control-Allow-Origin: *");
 header("Content-Type: application/json; charset=UTF-8");
-class ReadGame{
+class ReadGraphicConfig{
 
     private $conn;
     private $dbname;
@@ -20,8 +19,8 @@ class ReadGame{
         $this->conn = $this->db->getConnection();
     }
 
-    function getAllGame(){
-        $collection = 'games';
+    function getAllGraphicConfig(){
+        $collection = 'graphicsConfig';
         // read all records
         $filter = [];
         $option = [];
@@ -32,10 +31,10 @@ class ReadGame{
         echo json_encode(iterator_to_array($records));
     } 
 
-    function getAllInformationOfGameById($params){
-        $collection = 'games';
+    function getGraphicConfigById($params){
+        $collection = 'graphicsConfig';
         // read all records
-        $filter = ['_id' => new MongoDB\BSON\ObjectId($params['game'])];
+        $filter = ['_id' => new MongoDB\BSON\ObjectId($params['graphicsConfig'])];
         $option = [];
         $read = new MongoDB\Driver\Query($filter, $option);
         //fetch records
@@ -45,21 +44,6 @@ class ReadGame{
         
         foreach($records as $record)
         {
-            //declaration of class
-            $Category = new ReadCategory;
-            $Platform = new ReadPlatform;
-
-            //Get Categories of game and append to record
-            $Categories = $this->db->Join($record,$Category,'getCategoryById','category','gamesCategories','gameCategoryId');
-            $record->gameCategories = $Categories;
-
-            //Get Platforms of game and append to record
-            $Plateforms = $this->db->Join($record,$Platform,'getPlatformById','platform','platforms','plateformId');
-            $record->platforms = $Plateforms;
-
-            //Get gameConfiguration of game and append to record
-            $gameConfiguration = $this->db->Join($record,$Platform,'getPlatformById','platform','platforms','plateformId');
-            $record->platforms = $Plateforms;
             echo json_encode($record);
         }
         

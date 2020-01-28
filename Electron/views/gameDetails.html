@@ -5,22 +5,22 @@
     <title>BestSettings</title>
 
     <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
-  
+
   </head>
-    
-  <script> 
+
+  <script>
     window.$ = window.jQuery = require('jquery');
-    
+
     $(function(){
-      $("#head").load("./partials/head.html"); 
-      $("#header").load("./partials/header.html"); 
-      $("#footer").load("./partials/footer.html"); 
+      $("#head").load("./partials/head.html");
+      $("#header").load("./partials/header.html");
+      $("#footer").load("./partials/footer.html");
     });
-  </script> 
+  </script>
 
 
   <body>
-    
+
     <header id="header">
 
     </header>
@@ -28,27 +28,13 @@
     <div class="container pt-4 mr-auto">
 
         <p id="error"></p>
-        
-        <div class="row">
+
+        <div class="row" id="gameInfo">
             <!-- Page Title -->
             <div class="col-1">
                 <a href="./index.html"><i class="fa fa-4x fa-arrow-circle-left returnBtn grow" aria-hidden="true"></i></a>
             </div>
 
-            <div class="col-4">
-                <div class="gameLogo" style="width:50%; background-image: url(../../API/Image/csgo-logo.png);"></div>
-            </div>
-
-            <div class="col-7 mt-2 float-right">
-                <div class="col-6">
-                    <img class="categoryLogo" src=""> nom de catégorie
-                </div>
-                <div class="col-6">
-                    <img class="platform" src=""> nom de plateforme
-                </div>
-            </div>
-        
-            <hr>
         </div>
 
         <!-- Graphics Table -->
@@ -114,7 +100,7 @@
         </div>
 
     </div>
-  
+
   </body>
   <script src="../js/Controller/DetailController.js"></script>
 </html>
