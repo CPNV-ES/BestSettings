@@ -44,7 +44,6 @@ $.ajax({
     dataType: 'json',
     success: function(data) {
         data.forEach(element => {
-            console.log(element);
             var a = menuContent.addElement('a', '');
             a.href= "";
             a.innerText= element.name;
