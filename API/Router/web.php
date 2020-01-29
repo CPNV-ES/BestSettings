@@ -30,6 +30,17 @@ Router::add('GET','/configuration/id', 'Configuration/ReadConfiguration@getConfi
 Router::add('GET','/graphicsConfig', 'GraphicConfig/ReadGraphicConfig@getAllGraphicConfig');
 Router::add('GET','/graphicsConfig/id', 'GraphicConfig/ReadGraphicConfig@getGraphicConfigById');
 
+//controllersConfig route
+Router::add('GET','/controllersConfig', 'controllersConfig/ReadControllerConfiguration@getAllControllerConfig');
+Router::add('GET','/controllersConfig/id', 'controllersConfig/ReadControllerConfiguration@getControllerConfigById');
+
+//device route
+Router::add('GET','/devices', 'Device/ReadDevice@getAllDevices');
+Router::add('GET','/device/id', 'Device/ReadDevice@getDeviceById');
+
+
+//file route
+Router::add('POST','/files', 'File/CreateImage@addImage');
 
 Router::run();
 ?>

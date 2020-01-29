@@ -1,11 +1,10 @@
 <?php
 // required headers
-require_once "Model/GraphicConfig/Read.php";
-require_once "Model/controllersConfig/Read.php";
+require_once "Model/Device/Read.php";
 
 header("Access-Control-Allow-Origin: *");
 header("Content-Type: application/json; charset=UTF-8");
-class ReadConfiguration{
+class ReadControllerConfiguration{
 
     private $conn;
     private $dbname;
@@ -20,8 +19,8 @@ class ReadConfiguration{
         $this->conn = $this->db->getConnection();
     }
 
-    function getAllConfiguration(){
-        $collection = 'configurations';
+    function getAllControllerConfig(){
+        $collection = 'controllersConfig';
         // read all records
         $filter = [];
         $option = [];
@@ -32,10 +31,10 @@ class ReadConfiguration{
         echo json_encode(iterator_to_array($records));
     } 
 
-    function getConfigurationById($params){
-        $collection = 'configurations';
+    function getControllerConfigById($params){
+        $collection = 'controllersConfig';
         // read all records
-        $filter = ['_id' => new MongoDB\BSON\ObjectId($params['configuration'])];
+        $filter = ['_id' => new MongoDB\BSON\ObjectId($params['controllersConfig'])];
         $option = [];
         $read = new MongoDB\Driver\Query($filter, $option);
         //fetch records
@@ -46,19 +45,15 @@ class ReadConfiguration{
             foreach($records as $record)
                 {
                     //declaration of class
-                    $graphicConfiguration = new ReadGraphicConfig;
-                    $controllerConfiguration = new ReadControllerConfiguration;
+                    $devices = new ReadDevice;
 
                     //Get Categories of game and append to record
-                    $graphicConfigurations = $this->db->JoinOneData($record,$graphicConfiguration,'getGraphicConfigById','graphicsConfig','graphicsConfigs','graphicsConfigId');
-                    $record->graphicsConfigs = $graphicConfigurations;
-
-                    $controllerConfigurations = $this->db->JoinMultipleData($record,$controllerConfiguration,'getControllerConfigById','controllersConfig','controllersConfigs','controllersConfigId');
-                    $record->controllersConfigs = $controllerConfigurations;
-                    
+                    $device = $this->db->JoinUniqueData($record,$devices,'getDeviceById','device','deviceId');
+                    $record->deviceId = $device;
                     $record = $this->db->ObjectToArray($record);
                     return $record;
                 }
+
         }else
         {
             echo json_encode(iterator_to_array($records));

@@ -26,7 +26,7 @@ class CreateGame{
         $collection = 'games';
         $jsondata = file_get_contents('php://input');
         $game = json_decode($jsondata);
-        $this->bulk->insert(['name' =>$game->name, 'logo' =>$game->logo, 'card' =>$game->card, 'platforms' => $game->platforms, 'gameCategories' => $game->gameCategories, 'gameConfigurations' => $game->gameConfigurations]);
+        $this->bulk->insert(['name' =>$game->name, 'logo' =>$game->logo, 'card' =>$game->card, 'platforms' => $game->platforms, 'gamesCategories' => $game->gamesCategories, 'gameConfigurations' => $game->gameConfigurations]);
         $result  = $this->manager->executeBulkWrite("$this->dbname.$collection", $this->bulk);;
         $json = array(
             'number' => $result->getInsertedCount()

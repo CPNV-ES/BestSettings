@@ -25,10 +25,9 @@ class DbManager{
         $DataArray = [];
         foreach($record->$attribute as $row)
         {
-            $id[$idName]=$row->$idattribute;
-            $id['return']= 1;
-            if(!is_null($id[$idName]))
-            {   
+            if(!empty($row->$idattribute)){
+                $id[$idName]=$row->$idattribute;
+                $id['return']= 1;  
                 $Data = array_shift($object->$function($id));
                 array_push($DataArray,$Data);
             }
@@ -40,16 +39,26 @@ class DbManager{
         $DataArray = [];
         foreach($record->$attribute as $row)
         {
-            $id[$idName]=$row->$idattribute;
-            $id['return']= 1;
-            if(!is_null($id[$idName]))
-            {   
+            if(!empty($row->$idattribute)){
+                $id[$idName]=$row->$idattribute;
+                $id['return']= 1;
                 $Data = array_shift($object->$function($id));
                 $DataArray = $Data;
             }
         }
         return $DataArray;
     }
+
+    function JoinUniqueData($record,$object,$function,$idName,$idattribute){
+        $DataArray = [];
+            if(!empty($record->$idattribute)){
+                $id[$idName]=$record->$idattribute;
+                $id['return']= 1;
+                $Data = array_shift($object->$function($id));
+                $DataArray = $Data;
+            }
+            return $DataArray;
+        }
 
     function ObjectToArray($object){
         $Data[] = $object;
