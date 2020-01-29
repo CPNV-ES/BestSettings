@@ -50,3 +50,21 @@ function AddInformationGame(data){
     gameInfo.addElement('hr');
     document.getElementById("gameInfo");
 }
+
+$.ajax({
+    url: serveur+'/categories',
+    data: '',
+    error: function() {
+        document.getElementById("error").innerText="An error has occurred";
+    },
+    dataType: 'json',
+    success: function(data) {
+        data.forEach(element => {
+            console.log(element);
+            var a = menuContent.addElement('a', '');
+            a.href= "";
+            a.innerText= element.name;
+            });
+    },
+    type: 'GET'
+});
