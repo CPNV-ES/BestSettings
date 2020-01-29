@@ -12,9 +12,10 @@
     window.$ = window.jQuery = require('jquery');
 
     $(function(){
-      $("#head").load("./partials/head.html");
-      $("#header").load("./partials/header.html");
-      $("#footer").load("./partials/footer.html");
+      $("#head").load("./partials/head.html"); 
+      $("#header").load("./partials/header.html"); 
+      $("#sideNav").load("./partials/sideNav.html"); 
+      $("#footer").load("./partials/footer.html"); 
     });
   </script>
 
@@ -24,6 +25,10 @@
     <header id="header">
 
     </header>
+    
+    <div id="sideNav">
+      
+    </div>
 
     <div class="container pt-4 mr-auto">
 
@@ -100,4 +105,6 @@
 
   </body>
   <script src="../js/Controller/DetailController.js"></script>
+  <script src="../js/util.js"></script>
+
 </html>

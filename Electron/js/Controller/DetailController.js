@@ -53,6 +53,7 @@ function AddInformationGame(data) {
     document.getElementById("gameInfo");
 }
 
+<<<<<<< HEAD
 function AddTableGraphic(data) {
     settings = data.gameConfigurations[0].graphicsConfigs.settings[0];
     row = createRow(settings);
@@ -93,3 +94,22 @@ function createRow(settings) {
     });
     return parameter;
 }
+=======
+$.ajax({
+    url: serveur+'/categories',
+    data: '',
+    error: function() {
+        document.getElementById("error").innerText="An error has occurred";
+    },
+    dataType: 'json',
+    success: function(data) {
+        data.forEach(element => {
+            console.log(element);
+            var a = menuContent.addElement('a', '');
+            a.href= "";
+            a.innerText= element.name;
+            });
+    },
+    type: 'GET'
+});
+>>>>>>> b9c3f7d66da53ef52107323a1d9151f51a6010e3
