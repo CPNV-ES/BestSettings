@@ -53,7 +53,6 @@ function AddInformationGame(data) {
     document.getElementById("gameInfo");
 }
 
-<<<<<<< HEAD
 function AddTableGraphic(data) {
     settings = data.gameConfigurations[0].graphicsConfigs.settings[0];
     row = createRow(settings);
@@ -112,4 +111,3 @@ $.ajax({
     },
     type: 'GET'
 });
->>>>>>> b9c3f7d66da53ef52107323a1d9151f51a6010e3
