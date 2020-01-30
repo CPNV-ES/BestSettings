@@ -5,7 +5,7 @@ include('Router.php');
 Router::add('GET','/games', 'Game/ReadGame@getAllGame');
 Router::add('GET','/game/id', 'Game/ReadGame@getAllInformationOfGameById');
 Router::add('POST','/games', 'Game/CreateGame@CreateGame');
-Router::add('DELETE','/games/id', 'Game/DeleteGame@deleteGameById' );
+Router::add('DELETE','/game/id', 'Game/DeleteGame@deleteGameById' );
 Router::add('PUT','/games/id', 'Game/UpdateGame@updateGameById' );
 
 //Categories route

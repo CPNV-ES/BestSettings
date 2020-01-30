@@ -90,11 +90,6 @@ submit.addEventListener("click", function () {
         type: 'POST',
         contentType: false,
         processData: false,
-        error: function () {
-            document.getElementById("error").innerText = "An error has occurred";
-        },
-        success: function () {
-        },
     });
     $.ajax({
         url: serveur + '/games',

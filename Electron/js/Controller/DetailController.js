@@ -50,10 +50,26 @@ window.addEventListener('load', function () {
             img.width = "24";
             img.height = "24";
         });
+        var button = gameInfo.addElement('button','btn btn-danger h-50 mt-4');
+        button.id = "deletegame";
+        button.innerText = "Delete";
+        deleteGame();
         gameInfo.addElement('hr');
-        document.getElementById("gameInfo");
     }
-
+    function deleteGame(){
+        deletegame.addEventListener("click", function () {
+            $.ajax({
+                url: serveur + '/game/' + id,
+                error: function () {
+                    document.getElementById("error").innerText = "An error has occurred";
+                },
+                success: function (result) {
+                    window.location = "index.html";
+                },
+                type: 'DELETE'
+            });
+        });
+    }
     function AddTableGraphic(data) {
         if (data.gameConfigurations.length > 0) {
             if (data.gameConfigurations[0].graphicsConfigs) {
