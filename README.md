@@ -8,6 +8,8 @@ Application desktop réalisé en Electron pour afficher les meilleures configura
 - Installer mongoDB
 - Installer Compass
 - Ajouter les données dans la DB
+- PHP et Driver MongoDB
+- Démarrer le projet
 
 
 ## Installation des packages 
@@ -52,6 +54,32 @@ Créez les collections par rapport au nom des fichiers se trouvons dans le dossi
     -platforms
 
 Importez les fichiers json dans les collections correspondante.
+
+## PHP et Driver MongoDB
+
+### PHP
+
+L'API fonctionne avec la version 7.4 de php.
+
+L'API à besoin du driver de mongodb pour permettre d'intéragir avec mongodb.
+
+### Ajout Driver MongoDB
+
+Télécharger le driver avec un des liens ci-dessous.
+
+x64:
+https://windows.php.net/downloads/pecl/releases/mongodb/1.6.1/php_mongodb-1.6.1-7.4-nts-vc15-x64.zip
+
+x86:
+https://windows.php.net/downloads/pecl/releases/mongodb/1.6.1/php_mongodb-1.6.1-7.4-nts-vc15-x86.zip
+
+Ajouter le fichier php_mongodb.dll dans le dossier ext de PHP.
+
+Dans le fichier de configuration php.ini. À l'emplacement des extensions rajoutez:
+
+```php
+extension=php_mongodb.dll
+```
 
 ## Démarrer le projet
 
