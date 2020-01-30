@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+
+<head id="head">
+  <meta charset="UTF-8">
+  <title>BestSettings</title>
+  <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
+
+</head>
+
+<script>
+  window.$ = window.jQuery = require('jquery');
+
+  $(function () {
+    $("#head").load("./partials/head.html");
+    $("#header").load("./partials/header.html");
+    $("#sideNav").load("./partials/sideNav.html");
+    $("#footer").load("./partials/footer.html");
+  });
+</script>
+
+
+<body>
+  <header id="header">
+
+  </header>
+
+  <div id="sideNav">
+
+  </div>
+
+  <div class="container pt-4">
+
+    <p id="error"></p>
+
+    <div class="row ">
+
+      <div class="col-sm-9 col-9">
+        <h1 class="title">Games</h1>
+      </div>
+
+      <div class="col-sm-3 col-3">
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-dark mt-2 customBtn" data-toggle="modal" data-target="#exampleModalCenter">
+          Add a game
+        </button>
+      </div>
+
+      <hr>
+
+    </div>
+
+    <div class="row gamesDisplay">
+      <div id="games" class="row pt-3">
+
+      </div>
+    </div>
+
+  </div>
+
+
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+
+      <div class="modal-content bg-dark">
+
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">Add a game</h5>
+          <button type="button" class="close modalClose" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+
+        <div class="modal-body">
+
+          <form>
+            <div class="form-group">
+              <label for="gameName">Game Name</label>
+              <input type="text" class="form-control" id="gameName" placeholder="Enter name">
+            </div>
+
+
+            <label for="logo">Logo</label>
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text">Upload</span>
+              </div>
+              <div class="custom-file">
+                <input type="file" class="custom-file-input" id="logoname">
+                <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
+              </div>
+            </div>
+
+            <label for="card">Card</label>
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text">Upload</span>
+              </div>
+              <div class="custom-file">
+                <input type="file" class="custom-file-input" id="cardname">
+                <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="card">Platform</label>
+
+              <select class="form-control" id="plateform">
+                <option value="" disabled selected>Platform....</option>
+              </select>
+
+            </div>
+
+            <div class="form-group">
+              <label for="card">Category</label>
+
+              <select class="form-control" id="categories">
+                <option value="" disabled selected>Category....</option>
+              </select>
+
+            </div>
+
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" id="submit" class="btn btn-dark customBtn">Save changes</button>
+        </div>
+
+        </form>
+
+      </div>
+    </div>
+  </div>
+
+</body>
+
+<script src="../js/Controller/GameController.js"></script>
+<script src="../js/util.js"></script>
+
+
+
+</html>

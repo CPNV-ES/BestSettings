@@ -2,5 +2,5 @@
 Electron/node_modules
 Electron/package-lock.json
 
-Electron/style/main.css
-Electron/style/main.css.map
+Electron/style/css/main.css
+Electron/style/css/main.css.map

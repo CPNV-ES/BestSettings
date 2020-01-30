@@ -23,7 +23,6 @@ class CreateCategory{
     }
 
     public function CreateCategory(){
-        echo '1';
         $collection = 'gamesCategories';
         $jsondata = file_get_contents('php://input');
         $category = json_decode($jsondata);

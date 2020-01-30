@@ -1,20 +1,4 @@
-[
-    {
-        "name": "Souris",
-        "logo": "/test/souris.png"
-    },
-    {
-        "name": "Clavier",
-        "logo": "/test/clavier.png"
-    },
-    {
-        "name": "Manette Xbox",
-        "logo": "/test/mXbox.png"
-        
-    },
-    {
-        "name": "Manette PS4",
-        "logo": "/test/mPs4.png"
-        
-    }
-]
+{"_id":{"$oid":"5e1853706e7ce22ae4a70607"},"name":"Souris","logo":"/test/souris.png"}
+{"_id":{"$oid":"5e1853706e7ce22ae4a70608"},"name":"Clavier","logo":"/test/clavier.png"}
+{"_id":{"$oid":"5e1853706e7ce22ae4a70609"},"name":"Manette Xbox","logo":"/test/mXbox.png"}
+{"_id":{"$oid":"5e1853706e7ce22ae4a7060a"},"name":"Manette PS4","logo":"/test/mPs4.png"}

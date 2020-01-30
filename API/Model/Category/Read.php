@@ -40,6 +40,7 @@ class ReadCategory{
         if(isset($params['return']))
         {
             return $records->toArray();
+            
         }else
         {
             echo json_encode(iterator_to_array($records));
