@@ -1,0 +1,36 @@
+////////////////////////////
+///// MAIN SCSS
+//////////////////////////
+
+
+/////////////////////
+// BASE //
+
+// Colors
+@import './base/colors';
+
+// General settings
+@import './base/generalSettings';
+
+
+/////////////////////
+// COMPONENTS //
+
+// Inputs
+@import 'components/inputs';
+
+// Cards
+@import 'components/cards';
+
+
+/////////////////////
+// LAYOUT //
+
+// Game settings page
+@import 'layout/gameSettings';
+
+// Animations
+@import 'layout/animations';
+
+// sideMenu
+@import 'layout/sideMenu';

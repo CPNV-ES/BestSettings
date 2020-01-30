@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head id="head">
+    <meta charset="UTF-8">
+    <title>BestSettings</title>
+
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
+
+  </head>
+  <script>
+    window.$ = window.jQuery = require('jquery');
+
+    $(function(){
+      $("#head").load("./partials/head.html");
+      $("#header").load("./partials/header.html"); 
+      $("#sideNav").load("./partials/sideNav.html"); 
+      $("#footer").load("./partials/footer.html"); 
+    });
+  </script>
+
+
+  <body>
+
+    <header id="header">
+
+    </header>
+    
+    <div id="sideNav">
+      
+    </div>
+
+    <div class="container pt-4 mr-auto">
+
+        <p id="error"></p>
+
+        <div class="row" id="gameInfo">
+            <!-- Page Title -->
+            <div class="col-1">
+                <a href="./index.html"><i class="fa fa-4x fa-arrow-circle-left returnBtn grow" aria-hidden="true"></i></a>
+            </div>
+            
+        </div>
+        <!-- Graphics Table -->
+        <div class="row pt-5">
+            <div class="col-12 pb-3">
+                <h3 class="title">Graphic settings</h3>
+            </div>
+
+            <div class="col-12 table-responsive">
+
+                <table class="table table-dark table-striped ">
+                    <thead>
+                        <tr>
+                            <th>PARAMETER</th>
+                            <th>HIGH PERFORMANCE</th>
+                            <th>MEDIUM PERFORMANCE</th>
+                            <th>LOW PERFORMANCE</th>
+                            
+                        </tr>
+                    </thead>
+
+                    <tbody id="graphicsettings">
+                    </tbody>
+
+                </table>
+            </div>
+
+        </div>
+
+        <!-- Controller Table -->
+        <div class="row pt-5">
+            <div class="col-12 pb-3">
+                <h3 class="title">Controllers settings</h3>
+            </div>
+
+            <div class="col-12 table-responsive" id="controllersettings">
+
+            </div>
+
+        </div>
+    </div>
+
+  </body>
+  <script src="../js/Controller/DetailController.js"></script>
+  <script src="../js/util.js"></script>
+
+</html>

@@ -1,0 +1,48 @@
+////////////////////////////
+///// Cards
+//////////////////////////
+
+
+.card{    
+    width: 14rem !important;
+    height: 95%;
+    margin-right: 50px;
+    border: none !important;
+    background-color: unset !important;
+}
+
+.card:hover{
+    border: none !important;
+}
+
+a:hover {
+    text-decoration: none !important;
+}
+
+
+.card-title{
+    color: $main-text;
+    font-weight: bolder;
+    margin-top: -12px;
+}
+
+.card-text{
+    color: $main-text !important;
+    margin-top: -14px;
+}
+
+.card-img {
+    background-position: center;
+    background-size: cover;
+    height: 300px;
+}
+
+.card-img, .card-img-bottom {
+    border-bottom-left-radius: unset !important;
+    border-bottom-right-radius: unset !important;
+}
+
+.card-body{
+    background-color: $components;
+    height: 20%;
+}
