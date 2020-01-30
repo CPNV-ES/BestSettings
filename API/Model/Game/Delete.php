@@ -24,7 +24,7 @@ class DeleteGame{
     
     public function deleteGameById($params){
         $collection = 'games';
-        $this->bulk->delete(['_id' => new MongoDB\BSON\ObjectId($params['games'])], ['limit' => 1]);
+        $this->bulk->delete(['_id' => new MongoDB\BSON\ObjectId($params['game'])], ['limit' => 1]);
         $result = $this->manager->executeBulkWrite("$this->dbname.$collection",$this->bulk);
         $json = array(
             'number' => $result->getDeletedCount()

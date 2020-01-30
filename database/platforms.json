@@ -1,6 +1,6 @@
-{"_id":{"$oid":"5e18542c6e7ce22ae4a70614"},"name":"Steam","logo":"/test/steam.png"}
-{"_id":{"$oid":"5e18542c6e7ce22ae4a70615"},"name":"Uplay","logo":"/test/uplay.png"}
-{"_id":{"$oid":"5e18542c6e7ce22ae4a70616"},"name":"Origin","logo":"/test/origin.png"}
-{"_id":{"$oid":"5e18542c6e7ce22ae4a70617"},"name":"Battle.net","logo":"/test/battleNet.png"}
-{"_id":{"$oid":"5e18542c6e7ce22ae4a70618"},"name":"Epic Games","logo":"/test/epicgames.png"}
-{"_id":{"$oid":"5e18542c6e7ce22ae4a70619"},"name":"GOG","logo":"/test/gog.png"}
+{"_id":{"$oid":"5e185206ac003817986337fe"},"name":"Steam","logo":"/Image/steam.svg"}
+{"_id":{"$oid":"5e185206ac003817986337ff"},"name":"Uplay","logo":"/test/uplay.png"}
+{"_id":{"$oid":"5e185206ac00381798633800"},"name":"Origin","logo":"/test/origin.png"}
+{"_id":{"$oid":"5e185206ac00381798633801"},"name":"Battle.net","logo":"/test/battleNet.png"}
+{"_id":{"$oid":"5e185206ac00381798633802"},"name":"Epic Games","logo":"/test/epicgames.png"}
+{"_id":{"$oid":"5e185206ac00381798633803"},"name":"GOG","logo":"/test/gog.png"}

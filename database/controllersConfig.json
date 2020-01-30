@@ -1,0 +1,2 @@
+{"_id":{"$oid":"5e185243ac00381798633805"},"settings":[{"attaque":"x","Saut":"space"}],"drivers":"https://moncul.ch","deviceId":"5e1851f4ac003817986337fb"}
+{"_id":{"$oid":"5e31aa985f3cc14790110677"},"settings":[{"attaque faible":"clic droit","attaque forte":"clic gauche"}],"drivers":"https://moncul.ch","deviceId":"5e1851f4ac003817986337fa"}

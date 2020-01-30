@@ -1,5 +1,5 @@
-{"_id":{"$oid":"5e1853a86e7ce22ae4a7060b"},"name":"FPS","logo":"/test/fps.png"}
-{"_id":{"$oid":"5e1853a86e7ce22ae4a7060c"},"name":"TPS","logo":"/test/tps.png"}
-{"_id":{"$oid":"5e1853a86e7ce22ae4a7060d"},"name":"MOBA","logo":"/test/moba.png"}
-{"_id":{"$oid":"5e1853a86e7ce22ae4a7060e"},"name":"MMO","logo":"/test/mmo.png"}
-{"_id":{"$oid":"5e1853a86e7ce22ae4a7060f"},"name":"RPG","logo":"/test/rpg.png"}
+{"_id":{"$oid":"5e185262ac00381798633807"},"name":"TPS","logo":"/test/tps.png"}
+{"_id":{"$oid":"5e185262ac00381798633808"},"name":"MOBA","logo":"/test/moba.png"}
+{"_id":{"$oid":"5e185262ac00381798633809"},"name":"MMO","logo":"/test/mmo.png"}
+{"_id":{"$oid":"5e185262ac0038179863380a"},"name":"RPG","logo":"/test/rpg.png"}
+{"_id":{"$oid":"5e296334387e000080003cd3"},"name":"FPS","logo":"/Image/FPS.svg"}
